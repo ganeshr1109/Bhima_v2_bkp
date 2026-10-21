@@ -1,0 +1,422 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f4f5f7;
+  background-image: url('/assets/pattern-bg.webp');
+  background-repeat: repeat-y;
+  background-position: top center;
+  background-size: 100% auto;
+  background-attachment: fixed;
+}
+
+.hindi-text {
+  font-family: 'Tiro Devanagari Hindi', serif;
+}
+
+/* Pattern background used behind the sticky nav / hero on the home page */
+
+.truck-nav-bg {
+  background-color: #f4f5f7;
+  background-image: url('/assets/pattern-bg.webp');
+  background-repeat: repeat-y;
+  background-position: top center;
+  background-size: 100% auto;
+  background-attachment: fixed;
+
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+nav.truck-nav-bg {
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.pattern-body-bg {
+  background-image: url('/assets/pattern-bg.webp');
+  background-repeat: repeat-y;
+  background-position: top center;
+  background-size: 100% auto;
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+    .pattern-body-bg {
+        background-size: contain;
+    }
+}
+/* Desktop dropdown menu reveal on hover */
+
+
+/* Glossy / mirror finish card effect used on the fleet & inquiry cards */
+.glossy-card {
+  background: rgba(255, 255, 255, 0.50);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.glossy-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+
+.glossy-card.shine-once::before {
+  animation: glossy-shine-once 0.7s ease-out forwards;
+}
+
+@keyframes glossy-shine-once {
+  from {
+    left: -150%;
+  }
+
+  to {
+    left: 150%;
+  }
+}
+
+/* Decorative border used on spec-page hero cards */
+
+.glass-section {
+    background: rgba(255,255,255,0.50);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border-radius: 25px;
+
+    border: 1px solid rgba(255,255,255,.35);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.08),
+        inset 0 1px 0 rgba(255,255,255,.6);
+
+    overflow: hidden;
+
+    width: calc(100% - 24px);
+    margin: 0 auto;
+}
+.vehicle-glass {
+  background: rgba(255, 255, 255, 0.50);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+
+
+/* Laptop */
+@media (max-width: 1024px) {
+    .glass-section {
+        border-radius: 25px;
+        width: calc(100% - 20px);
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .glass-section {
+        border-radius: 25px;
+        width: calc(100% - 16px);
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .glass-section {
+        border-radius: 25px;
+        width: calc(100% - 12px);
+    }
+}
+
+
+
+
+
+/*======================================================*/
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins/Poppins-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tiro Devanagari Hindi';
+  src: url('/fonts/Poppins,Tiro_Devanagari_Hindi/Tiro_Devanagari_Hindi/TiroDevanagariHindi-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.hindi-text {
+  font-family: 'Tiro Devanagari Hindi', serif;
+}
+
+/* =========================================================
+   GLOBAL RESPONSIVE FIXES
+   ========================================================= */
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  .glass-section {
+    width: calc(100% - 20px);
+  }
+
+  .glossy-card {
+    max-width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* Prevent horizontal scrolling */
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Main page containers */
+  main {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Glass sections */
+  .glass-section {
+    width: calc(100% - 16px);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 22px;
+  }
+
+  /* Glossy cards */
+  .glossy-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Images */
+  img {
+    max-width: 100%;
+  }
+
+  /* Long text should wrap */
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  span {
+    overflow-wrap: break-word;
+  }
+
+  /* Buttons and links */
+  button,
+  a {
+    max-width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .glass-section {
+    width: calc(100% - 12px);
+    border-radius: 20px;
+  }
+
+  /* Reduce excessive page spacing */
+  main {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  /* Better mobile headings */
+  h1 {
+    line-height: 1.15;
+  }
+
+  h2,
+  h3 {
+    line-height: 1.2;
+  }
+
+  /* Form controls */
+  input,
+  select,
+  textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .glass-section {
+    width: calc(100% - 8px);
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .glossy-card {
+    border-radius: 18px;
+  }
+
+}
+.fleet-image-glass {
+  background: rgba(232, 90, 28, 0.10);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+:root {
+  --navbar-height: 0px;
+}
+
+#root {
+  padding-top: var(--navbar-height);
+}
+@supports (-webkit-touch-callout: none) {
+  body,
+  .truck-nav-bg,
+  .pattern-body-bg {
+    background-attachment: scroll;
+  }
+}
+.dropdown-glass {
+  background: rgba(255, 255, 255, 0.50);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+.desktop-menu:has(.vehicles-trigger:hover) .dropdown-menu,
+.desktop-menu:has(.dropdown-menu:hover) .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 0;
+  right: 0;
+  height: 8px;
+}
+
+@keyframes cartProgress {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0%;
+  }
+}
+
